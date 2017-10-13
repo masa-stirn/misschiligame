@@ -20,7 +20,16 @@ body{
             background-repeat: no-repeat;
             z-index: 100;
         }
-    .girl {
+        .girl {
+            width: 80px;
+            height: 150px;
+            position: absolute;
+            top: 5%;
+            left:2%;
+            background-image: url(../images/misschili.svg);
+            background-position: 0px 0px;
+        }
+        /*.girl {
             width: 80px;
             height: 150px;
             position: absolute;
@@ -28,7 +37,17 @@ body{
             left:2%;
             background-image: url(../images/MissChiliwalk_779x150.png);
             background-position: 2px 0px;
-            animation: walk 1.5s infinite steps(9);
+        }*/
+        .pickDoughnut {
+        animation: walk 1.5s steps(9) forwards;
+            background-image: url(../images/MissChiliwalk_779x150.png);
+            background-position: 2px 0px;
+        }
+         @keyframes walk {
+            100% {
+                background-position: -779px 0px;
+                transform: translateX(110px) translateY(-10px);
+            }
         }
 
         .doughnut {
@@ -37,6 +56,8 @@ body{
             top: 3%;
             left:8%;
         }
+
+
         .flour {
             width: 15%;
             position: absolute;
@@ -92,6 +113,7 @@ body{
             top: 5%;
             left: 3%;
             animation: float 5s 2s infinite;
+            z-index: -1;
         }
 
         @keyframes float {
@@ -107,13 +129,6 @@ body{
             position: absolute;
             top: 85%;
             left: 56%;
-        }
-
-
-        @keyframes walk {
-            100% {
-                background-position: -779px 0px;
-            }
         }
 
         .shakeCSS2 {
