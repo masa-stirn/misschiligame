@@ -48,7 +48,7 @@ function chiliHome(){
     chili.classList.remove("hide");
     chili2.classList.remove("burnDoughnut");
     girl.classList.remove("pickDoughnut");
-    girl.classList.remove("shakeGirl");
+    girl.classList.remove("shakeGirlDougnut");
 }
 
 macaron.addEventListener("click", pickMacaron)
@@ -82,6 +82,7 @@ function chiliHome2(){
     chili.classList.remove("hide");
     chili2.classList.remove("burnMacaron");
      girl.classList.remove("pickMacaron");
+    girl.classList.remove("shakeGirlMac");
 }
 
 milk.addEventListener("click", pickMilk)
@@ -139,5 +140,24 @@ function hideEgg(){
     egg.classList.add("hide");
     girl.classList.remove("pickEgg");
     girl.classList.remove("jumpEgg");
+}
+
+chocolate.addEventListener("click", pickChocolate)
+
+ function pickChocolate() {
+     girl.classList.add("pickChocolate");
+     setTimeout(pickChocolateDone, 2000);
+ }
+
+function pickChocolateDone() {
+    girl.classList.add("jumpChocolate");
+    yesAudio.play();
+    yesAudio.addEventListener('ended', hideChocolate)
+}
+
+function hideChocolate(){
+    chocolate.classList.add("hide");
+    girl.classList.remove("pickChocolate");
+    girl.classList.remove("jumpChocolate");
 }
 

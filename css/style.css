@@ -261,6 +261,41 @@ top: 10%;
     }
 }
 
+.pickChocolate {
+    animation: Chocowalk 1.5s steps(9) forwards;
+    background-image: url(../images/MissChiliwalk_779x150.png);
+    background-position: 2px 0px;
+}
+
+@keyframes Chocowalk {
+    100% {
+        background-position: -779px 0px;
+    top: 52%;
+    left: 54%;
+    }
+}
+
+.jumpChocolate {
+    animation: jumpchoco 0.3s 1 forwards;
+}
+
+@keyframes jumpchoco {
+    0% {
+    top: 52%;
+    left: 54%;
+    }
+    50% {
+        transform: scale(0.98);
+    top: 50%;
+    left: 54%;
+    }
+    100% {
+    top: 57%;
+    left: 54%;
+    }
+}
+
+
 .doughnut {
     width: 20%;
     position: absolute;
