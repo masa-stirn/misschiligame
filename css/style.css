@@ -1,155 +1,304 @@
-body{
-            background-color: #8cc63f;
-        }
-        .sky {
-            width: 100%;
-            height: 15%;
-            background-color: #8ccbf9;
-            position: absolute;
-            top:0;
-            left:0;
-            z-index: -100;
+body {
+    background-color: #8cc63f;
+}
+audio{
+    display: none;
+}
+.sky {
+    width: 100%;
+    height: 15%;
+    background-color: #8ccbf9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -100;
+}
+
+.bg {
+    background-image: url(../images/characters2.svg);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    z-index: 100;
+}
+
+.girl {
+    width: 80px;
+    height: 150px;
+    position: absolute;
+    top: 5%;
+    left: 2%;
+    background-image: url(../images/misschili.svg);
+    background-position: 0px 0px;
+    z-index: 90;
+}
+
+.pickDoughnut {
+    animation: walk 1.5s steps(9) forwards;
+    background-image: url(../images/MissChiliwalk_779x150.png);
+    background-position: 2px 0px;
+}
+
+@keyframes walk {
+    100% {
+        background-position: -779px 0px;
+        top: 3%;
+    left: 8%;
+    }
+}
+
+.burnDoughnut {
+    width: 156.5px;
+    height: 160px;
+    z-index: 100;
+    position: absolute;
+    top: 5%;
+    left: 3%;
+    animation: fire 1.5s steps(5) forwards;
+    background-image: url(../images/MrChiliFire.png);
+    background-position: 2px 0px;
+}
+@keyframes fire {
+    50%{
+        transform: translateX(80px) translateY(10px);
+    }
+    100% {
+        background-position: -782px 0px;
+        transform: translateX(80px) translateY(10px);
+    }
+}
+
+.pickMacaron {
+    animation: Macwalk 1.5s steps(9) forwards;
+    background-image: url(../images/MissChiliwalk_779x150.png);
+    background-position: 2px 0px;
+}
+
+@keyframes Macwalk {
+    100% {
+        background-position: -779px 0px;
+        top: 10%;
+        left: 23%;
+    }
+}
+
+.burnMacaron {
+    width: 156.5px;
+    height: 160px;
+    z-index: 100;
+    position: absolute;
+    top: 5%;
+    left: 3%;
+    animation: Macfire 1.5s steps(5) forwards;
+    background-image: url(../images/MrChiliFire.png);
+    background-position: 2px 0px;
+}
+
+@keyframes Macfire {
+     50%{
+        transform: translateX(300px) translateY(10px);
+    }
+    100% {
+        background-position: -782px 0px;
+        transform: translateX(300px) translateY(10px);
+    }
+}
+
+.pickMilk {
+    animation: Milkwalk 1.5s steps(9) forwards;
+    background-image: url(../images/MissChiliwalk_779x150.png);
+    background-position: 2px 0px;
+}
+
+@keyframes Milkwalk {
+    100% {
+        background-position: -779px 0px;
+        top: 25%;
+        left: 35%;
+    }
+}
+
+.jumpMilk {
+            animation: jumpmilk 0.3s 1 forwards;
         }
 
-        .bg {
-            background-image: url(../images/characters2.svg);
-            width: 100vw;
-            height: 100vh;
-            top: 0;
-            left: 0;
-            background-repeat: no-repeat;
-            z-index: 100;
-        }
-        .girl {
-            width: 80px;
-            height: 150px;
-            position: absolute;
-            top: 5%;
-            left:2%;
-            background-image: url(../images/misschili.svg);
-            background-position: 0px 0px;
-        }
-        /*.girl {
-            width: 80px;
-            height: 150px;
-            position: absolute;
-            top: 6%;
-            left:2%;
-            background-image: url(../images/MissChiliwalk_779x150.png);
-            background-position: 2px 0px;
-        }*/
-        .pickDoughnut {
-        animation: walk 1.5s steps(9) forwards;
-            background-image: url(../images/MissChiliwalk_779x150.png);
-            background-position: 2px 0px;
-        }
-         @keyframes walk {
+        @keyframes jumpmilk {
+            0% {
+                top: 22%;
+        left: 35%;
+            }
+            25% {
+                top: 20%;
+        left: 35%;
+            }
+            50% {
+                transform: scale(0.98);
+                top: 22%;
+        left: 35%;
+            }
             100% {
-                background-position: -779px 0px;
-                transform: translateX(110px) translateY(-10px);
+                top: 24%;
+        left: 35%;
             }
         }
 
-        .doughnut {
-            width: 20%;
-            position: absolute;
-            top: 3%;
-            left:8%;
+.pickSugar {
+    animation: Sugarwalk 1.5s steps(9) forwards;
+    background-image: url(../images/MissChiliwalk_779x150.png);
+    background-position: 2px 0px;
+}
+
+@keyframes Sugarwalk {
+    100% {
+        background-position: -779px 0px;
+        top: 15%;
+        left: 56%;
+    }
+}
+
+.jumpSugar {
+            animation: jumpsugar 0.3s 1 forwards;
         }
 
-
-        .flour {
-            width: 15%;
-            position: absolute;
-            top: 57%;
-            left:25%;
-            filter: drop-shadow(10px 0px 8px rgba(256,256,256,0.8));
-        }
-        .sugar{
-            width: 18%;
-            position: absolute;
-            top: 15%;
-            left:56%;
-            filter: drop-shadow(10px 0px 8px rgba(256,256,256,0.8));
-        }
-        .chocolate{
-            width: 10%;
-            position: absolute;
-            top: 62%;
-            left:58%;
-            filter: drop-shadow(10px 0px 8px rgba(256,256,256,0.8));
-        }
-        .milk{
-            width: 15%;
-            position: absolute;
-            top: 25%;
-            left:35%;
-            filter: drop-shadow(10px 0px 8px rgba(256,256,256,0.8));
-        }
-        .butter{
-            width: 15%;
-            position: absolute;
-            top: 72%;
-            left:4%;
-            filter: drop-shadow(10px 0px 8px rgba(256,256,256,0.8));
-        }
-        .egg{
-            width: 16%;
-            position: absolute;
-            top: 35%;
-            left:71%;
-            filter: drop-shadow(10px 0px 8px rgba(256,256,256,0.8));
-
-        }
-        .macaron{
-            width: 20%;
-            position: absolute;
-            top: 10%;
-            left:23%;
-        }
-        .chili {
-            width: 15%;
-            position: absolute;
-            top: 5%;
-            left: 3%;
-            animation: float 5s 2s infinite;
-            z-index: -1;
-        }
-
-        @keyframes float {
+        @keyframes jumpsugar {
+            0% {
+                        top: 12%;
+        left: 56%;
+            }
             25% {
-                transform: translateY(-10px);
+                       top: 12%;
+        left: 56%;
             }
-            75% {
-                transform: translateY(10px);
+            50% {
+                transform: scale(0.98);
+                        top: 15%;
+        left: 56%;
             }
-        }
-        .burger {
-            width: 15%;
-            position: absolute;
-            top: 85%;
-            left: 56%;
+            100% {
+                        top: 17%;
+        left: 56%;
+            }
         }
 
-        .shakeCSS2 {
-            animation: shakeit 0.5s 1s infinite ease-in-out;
-        }
-        @keyframes shakeit {
-            25% {
-                transform: translateY(-2px);
-            }
-            75% {
-                transform: translateY(2px);
-            }
-        }
-        .shakeCSS1 {
-            animation: shakeitoff 1s infinite ease-in-out;
-        }
-        @keyframes shakeitoff {
-            25% {
-                transform: translateX(3px);
-            }
-            75% {
-                transform: translateX(-3px);
-            }
-        }
+
+.doughnut {
+    width: 20%;
+    position: absolute;
+    top: 3%;
+    left: 8%;
+}
+
+.flour {
+    width: 15%;
+    position: absolute;
+    top: 57%;
+    left: 25%;
+    filter: drop-shadow(10px 0px 8px rgba(256, 256, 256, 0.8));
+}
+
+.sugar {
+    width: 18%;
+    position: absolute;
+    top: 15%;
+    left: 56%;
+    filter: drop-shadow(10px 0px 8px rgba(256, 256, 256, 0.8));
+}
+
+.chocolate {
+    width: 10%;
+    position: absolute;
+    top: 62%;
+    left: 58%;
+    filter: drop-shadow(10px 0px 8px rgba(256, 256, 256, 0.8));
+}
+
+.milk {
+    width: 15%;
+    position: absolute;
+    top: 25%;
+    left: 35%;
+    filter: drop-shadow(10px 0px 8px rgba(256, 256, 256, 0.8));
+}
+
+.butter {
+    width: 15%;
+    position: absolute;
+    top: 72%;
+    left: 4%;
+    filter: drop-shadow(10px 0px 8px rgba(256, 256, 256, 0.8));
+}
+
+.egg {
+    width: 16%;
+    position: absolute;
+    top: 35%;
+    left: 71%;
+    filter: drop-shadow(10px 0px 8px rgba(256, 256, 256, 0.8));
+}
+
+.macaron {
+    width: 20%;
+    position: absolute;
+    top: 10%;
+    left: 23%;
+}
+
+.chili-def {
+    width: 15%;
+    position: absolute;
+    top: 5%;
+    left: 3%;
+    animation: float 5s 2s infinite;
+    z-index: -1;
+}
+
+@keyframes float {
+    25% {
+        transform: translateY(-10px);
+    }
+    75% {
+        transform: translateY(10px);
+    }
+}
+
+.burger {
+    width: 15%;
+    position: absolute;
+    top: 85%;
+    left: 56%;
+}
+
+.shakeCSS2 {
+    animation: shakeit 0.5s 1s infinite ease-in-out;
+}
+
+@keyframes shakeit {
+    25% {
+        transform: translateY(-2px);
+    }
+    75% {
+        transform: translateY(2px);
+    }
+}
+
+.shakeCSS1 {
+    animation: shakeitoff 1s infinite ease-in-out;
+}
+
+@keyframes shakeitoff {
+    25% {
+        transform: translateX(3px);
+    }
+    75% {
+        transform: translateX(-3px);
+    }
+}
+
+/* hide chili*/
+
+.hide {
+    display: none;
+}
+
