@@ -295,6 +295,74 @@ top: 10%;
     }
 }
 
+.pickFlour {
+    animation: flourwalk 1.5s steps(9) forwards;
+    background-image: url(../images/MissChiliwalk_779x150.png);
+    background-position: 2px 0px;
+}
+
+@keyframes flourwalk {
+    100% {
+        background-position: -779px 0px;
+    top: 52%;
+    left: 24%;
+    }
+}
+
+.jumpFlour {
+    animation: jumpflour 0.3s 1 forwards;
+}
+
+@keyframes jumpflour {
+    0% {
+    top: 52%;
+    left: 24%;
+    }
+    50% {
+        transform: scale(0.98);
+    top: 50%;
+    left: 24%;
+    }
+    100% {
+    top: 57%;
+    left: 24%;
+    }
+}
+
+.pickButter {
+    animation: butterwalk 1.5s steps(9) forwards;
+    background-image: url(../images/MissChiliwalk_779x150.png);
+    background-position: 2px 0px;
+}
+
+@keyframes butterwalk {
+    100% {
+        background-position: -779px 0px;
+    top: 72%;
+    left: 3%;
+    }
+}
+
+.jumpButter {
+    animation: jumpbutter 0.3s 1 forwards;
+}
+
+@keyframes jumpbutter {
+    0% {
+    top: 72%;
+    left: 3%;
+    }
+    50% {
+        transform: scale(0.98);
+    top: 70%;
+    left: 3%;
+    }
+    100% {
+    top: 75%;
+    left: 3%;
+    }
+}
+
 
 .doughnut {
     width: 20%;

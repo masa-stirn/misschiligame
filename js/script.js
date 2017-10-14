@@ -161,3 +161,41 @@ function hideChocolate(){
     girl.classList.remove("jumpChocolate");
 }
 
+flour.addEventListener("click", pickFlour)
+
+ function pickFlour() {
+     girl.classList.add("pickFlour");
+     setTimeout(pickFlourDone, 2000);
+ }
+
+function pickFlourDone() {
+    girl.classList.add("jumpFlour");
+    yesAudio.play();
+    yesAudio.addEventListener('ended', hideFlour)
+}
+
+function hideFlour(){
+    flour.classList.add("hide");
+    girl.classList.remove("pickFlour");
+    girl.classList.remove("jumpFlour");
+}
+
+butter.addEventListener("click", pickButter)
+
+ function pickButter() {
+     girl.classList.add("pickButter");
+     setTimeout(pickButterDone, 2000);
+ }
+
+function pickButterDone() {
+    girl.classList.add("jumpButter");
+    yesAudio.play();
+    yesAudio.addEventListener('ended', hideButter)
+}
+
+function hideButter(){
+    butter.classList.add("hide");
+    girl.classList.remove("pickButter");
+    girl.classList.remove("jumpButter");
+}
+
