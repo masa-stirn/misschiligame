@@ -12,6 +12,7 @@ let chili = document.querySelector(".chili");
 let chili2 = document.querySelector(".chili2");
 let wrongAudio = document.getElementById("wrong");
 let yesAudio = document.getElementById("right");
+let blowAudio = document.getElementById("blow");
 
  function pageLoad() {
      console.log("function: pageLoad")
@@ -22,13 +23,17 @@ let yesAudio = document.getElementById("right");
 
  function pickDoughnut() {
      girl.classList.add("pickDoughnut");
+     setTimeout(pickDoughnutSound, 2000);
+ }
+function pickDoughnutSound() {
+     wrongAudio.play();
      setTimeout(pickDoughnutDone, 2000);
  }
 function pickDoughnutDone() {
-    wrongAudio.play();
     chili.classList.remove("chili-def");
     chili.classList.add("hide");
     chili2.classList.add("burnDoughnut");
+    blowAudio.play();
     chili2.addEventListener('animationend', hideDougnut)
 }
 
@@ -41,7 +46,7 @@ function chiliHome(){
     chili.classList.add("chili-def");
     chili.classList.remove("hide");
     chili2.classList.remove("burnDoughnut");
-        girl.classList.remove("pickDoughnut");
+    girl.classList.remove("pickDoughnut");
 }
 
 macaron.addEventListener("click", pickMacaron)
@@ -56,6 +61,7 @@ function pickMacaronDone() {
     chili.classList.remove("chili-def");
     chili.classList.add("hide");
     chili2.classList.add("burnMacaron");
+    blowAudio.play();
     chili2.addEventListener('animationend', hideMacaron)
 }
 
@@ -105,7 +111,26 @@ function pickSugarDone() {
 
 function hideSugar(){
     sugar.classList.add("hide");
-        girl.classList.remove("pickSugar");
+    girl.classList.remove("pickSugar");
     girl.classList.remove("jumpSugar");
+}
+
+egg.addEventListener("click", pickEgg)
+
+ function pickEgg() {
+     girl.classList.add("pickEgg");
+     setTimeout(pickEggDone, 2000);
+ }
+
+function pickEggDone() {
+    girl.classList.add("jumpEgg");
+    yesAudio.play();
+    yesAudio.addEventListener('ended', hideEgg)
+}
+
+function hideEgg(){
+    egg.classList.add("hide");
+    girl.classList.remove("pickEgg");
+    girl.classList.remove("jumpEgg");
 }
 
