@@ -444,11 +444,37 @@ top: 10%;
     }
 }
 
+.bowl {
+    width: 20%;
+    position: absolute;
+    top: 79%;
+    left: 21%;
+    filter: drop-shadow(10px 0px 8px rgba(256, 256, 256, 0.8));
+    animation: bowlshake 5s 2s infinite linear;
+}
+
+@keyframes bowlshake {
+    25% {
+        transform: translateY(-1px) rotate(4deg);
+    }
+    75% {
+        transform: translateY(1px) rotate(-4deg);
+    }
+}
+
 .burger {
     width: 15%;
     position: absolute;
     top: 85%;
-    left: 56%;
+    left: 57%;
+}
+
+.music-button {
+    width: 10%;
+    position: absolute;
+    top: 1%;
+    left: 91%;
+    cursor: pointer;
 }
 
 .shakeCSS2 {

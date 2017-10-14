@@ -13,12 +13,19 @@ let chili2 = document.querySelector(".chili2");
 let wrongAudio = document.getElementById("wrong");
 let yesAudio = document.getElementById("right");
 let blowAudio = document.getElementById("blow");
+let musicBtn = document.querySelector(".music-button");
 
  function pageLoad() {
      console.log("function: pageLoad")
-     let bgsound = document.querySelector("#bgsound");
-     //bgsound.play();
+     let bgsound = document.getElementById("bgsound");
+     bgsound.play();
  }
+musicBtn.addEventListener("click", soundOnOff)
+
+function soundOnOff(){
+    bgsound.pause();
+}
+
  doughnut.addEventListener("click", pickDoughnut)
 
  function pickDoughnut() {
@@ -28,7 +35,7 @@ let blowAudio = document.getElementById("blow");
 function pickDoughnutSound() {
     girl.classList.add("shakeGirlDougnut");
      wrongAudio.play();
-     setTimeout(pickDoughnutDone, 2000);
+     setTimeout(pickDoughnutDone, 1000);
  }
 function pickDoughnutDone() {
     chili.classList.remove("chili-def");
@@ -61,7 +68,7 @@ macaron.addEventListener("click", pickMacaron)
 function pickMacaronSound() {
     girl.classList.add("shakeGirlMac");
      wrongAudio.play();
-     setTimeout(pickMacaronDone, 2000);
+     setTimeout(pickMacaronDone, 1000);
  }
 
 function pickMacaronDone() {
@@ -199,3 +206,4 @@ function hideButter(){
     girl.classList.remove("jumpButter");
 }
 
+pageLoad();
