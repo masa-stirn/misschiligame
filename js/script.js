@@ -26,6 +26,7 @@ let blowAudio = document.getElementById("blow");
      setTimeout(pickDoughnutSound, 2000);
  }
 function pickDoughnutSound() {
+    girl.classList.add("shakeGirlDougnut");
      wrongAudio.play();
      setTimeout(pickDoughnutDone, 2000);
  }
@@ -47,17 +48,23 @@ function chiliHome(){
     chili.classList.remove("hide");
     chili2.classList.remove("burnDoughnut");
     girl.classList.remove("pickDoughnut");
+    girl.classList.remove("shakeGirl");
 }
 
 macaron.addEventListener("click", pickMacaron)
 
  function pickMacaron() {
      girl.classList.add("pickMacaron");
+     setTimeout(pickMacaronSound, 2000);
+ }
+
+function pickMacaronSound() {
+    girl.classList.add("shakeGirlMac");
+     wrongAudio.play();
      setTimeout(pickMacaronDone, 2000);
  }
 
 function pickMacaronDone() {
-    wrongAudio.play();
     chili.classList.remove("chili-def");
     chili.classList.add("hide");
     chili2.classList.add("burnMacaron");
