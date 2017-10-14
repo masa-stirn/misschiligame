@@ -489,12 +489,12 @@ audio {
     position: absolute;
     top: 5%;
     left: 3%;
-    animation: fire 1.5s steps(5) forwards;
+    animation: fireBurger 1.5s steps(5) forwards;
     background-image: url(../images/MrChiliFire.png);
     background-position: 2px 0px;
 }
 
-@keyframes fire {
+@keyframes fireBurger {
     25%{
         top: 80%;
         left: 25%;
