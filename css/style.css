@@ -112,15 +112,15 @@ audio {
 
 @keyframes shakegirlmac {
     0% {
-top: 10%;
+        top: 10%;
         left: 23%;
     }
     25% {
-top: 10%;
+        top: 10%;
         left: 22%;
     }
     100% {
-top: 10%;
+        top: 10%;
         left: 23%;
     }
 }
@@ -270,8 +270,8 @@ top: 10%;
 @keyframes Chocowalk {
     100% {
         background-position: -779px 0px;
-    top: 52%;
-    left: 54%;
+        top: 52%;
+        left: 54%;
     }
 }
 
@@ -281,17 +281,17 @@ top: 10%;
 
 @keyframes jumpchoco {
     0% {
-    top: 52%;
-    left: 54%;
+        top: 52%;
+        left: 54%;
     }
     50% {
         transform: scale(0.98);
-    top: 50%;
-    left: 54%;
+        top: 50%;
+        left: 54%;
     }
     100% {
-    top: 57%;
-    left: 54%;
+        top: 57%;
+        left: 54%;
     }
 }
 
@@ -304,8 +304,8 @@ top: 10%;
 @keyframes flourwalk {
     100% {
         background-position: -779px 0px;
-    top: 52%;
-    left: 24%;
+        top: 52%;
+        left: 24%;
     }
 }
 
@@ -315,17 +315,17 @@ top: 10%;
 
 @keyframes jumpflour {
     0% {
-    top: 52%;
-    left: 24%;
+        top: 52%;
+        left: 24%;
     }
     50% {
         transform: scale(0.98);
-    top: 50%;
-    left: 24%;
+        top: 50%;
+        left: 24%;
     }
     100% {
-    top: 57%;
-    left: 24%;
+        top: 57%;
+        left: 24%;
     }
 }
 
@@ -338,8 +338,8 @@ top: 10%;
 @keyframes butterwalk {
     100% {
         background-position: -779px 0px;
-    top: 72%;
-    left: 3%;
+        top: 72%;
+        left: 3%;
     }
 }
 
@@ -349,20 +349,19 @@ top: 10%;
 
 @keyframes jumpbutter {
     0% {
-    top: 72%;
-    left: 3%;
+        top: 72%;
+        left: 3%;
     }
     50% {
         transform: scale(0.98);
-    top: 70%;
-    left: 3%;
+        top: 70%;
+        left: 3%;
     }
     100% {
-    top: 75%;
-    left: 3%;
+        top: 75%;
+        left: 3%;
     }
 }
-
 
 .doughnut {
     width: 20%;
@@ -444,6 +443,20 @@ top: 10%;
     }
 }
 
+.pickBowl {
+    animation: bowlwalk 1.5s steps(9) forwards;
+    background-image: url(../images/MissChiliwalk_779x150.png);
+    background-position: 2px 0px;
+}
+
+@keyframes bowlwalk {
+    100% {
+        background-position: -779px 0px;
+        top: 82%;
+        left: 23%;
+    }
+}
+
 .bowl {
     width: 20%;
     position: absolute;
@@ -467,6 +480,56 @@ top: 10%;
     position: absolute;
     top: 85%;
     left: 57%;
+}
+
+.burnBurger {
+    width: 156.5px;
+    height: 160px;
+    z-index: 300;
+    position: absolute;
+    top: 5%;
+    left: 3%;
+    animation: fire 1.5s steps(5) forwards;
+    background-image: url(../images/MrChiliFire.png);
+    background-position: 2px 0px;
+}
+
+@keyframes fire {
+    25%{
+        top: 80%;
+        left: 25%;
+    }
+    100% {
+        background-position: -782px 0px;
+        top: 80%;
+        left: 25%;
+    }
+}
+
+
+.burgerAttack {
+    animation: burgerattack 1.5s linear forwards;
+    z-index:200;
+    filter: drop-shadow(25px 10px 13px rgba(195,0,0, 1));
+}
+
+@keyframes burgerattack {
+    0% {
+        top: 85%;
+        left: 57%;
+    }
+    25% {
+        top: 75%;
+        left: 41%;
+    }
+    75% {
+        top: 84%;
+        left: 31%;
+    }
+    100%{
+        top: 85%;
+        left: 28%;
+    }
 }
 
 .music-button {

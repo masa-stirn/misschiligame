@@ -8,23 +8,26 @@
  let butter = document.querySelector(".butter");
  let egg = document.querySelector(".egg");
  let burger = document.querySelector(".burger");
-let chili = document.querySelector(".chili");
-let chili2 = document.querySelector(".chili2");
-let wrongAudio = document.getElementById("wrong");
-let yesAudio = document.getElementById("right");
-let blowAudio = document.getElementById("blow");
-let musicBtn = document.querySelector(".music-button");
+ let chili = document.querySelector(".chili");
+ let chili2 = document.querySelector(".chili2");
+
+
+//audio
+ let wrongAudio = document.getElementById("wrong");
+ let yesAudio = document.getElementById("right");
+ let blowAudio = document.getElementById("blow");
+ let musicBtn = document.querySelector(".music-button");
 
  function pageLoad() {
      console.log("function: pageLoad")
      let bgsound = document.getElementById("bgsound");
-     bgsound.play();
+     //bgsound.play();
  }
-musicBtn.addEventListener("click", soundOnOff)
+ musicBtn.addEventListener("click", soundOnOff)
 
-function soundOnOff(){
-    bgsound.pause();
-}
+ function soundOnOff() {
+     bgsound.pause();
+ }
 
  doughnut.addEventListener("click", pickDoughnut)
 
@@ -32,178 +35,216 @@ function soundOnOff(){
      girl.classList.add("pickDoughnut");
      setTimeout(pickDoughnutSound, 2000);
  }
-function pickDoughnutSound() {
-    girl.classList.add("shakeGirlDougnut");
+
+ function pickDoughnutSound() {
+     girl.classList.add("shakeGirlDougnut");
      wrongAudio.play();
      setTimeout(pickDoughnutDone, 1000);
  }
-function pickDoughnutDone() {
-    chili.classList.remove("chili-def");
-    chili.classList.add("hide");
-    chili2.classList.add("burnDoughnut");
-    blowAudio.play();
-    chili2.addEventListener('animationend', hideDougnut)
-}
 
-function hideDougnut(){
-    doughnut.classList.add("hide");
-    setTimeout(chiliHome, 500);
-}
+ function pickDoughnutDone() {
+     chili.classList.remove("chili-def");
+     chili.classList.add("hide");
+     chili2.classList.add("burnDoughnut");
+     blowAudio.play();
+     chili2.addEventListener('animationend', hideDougnut)
+ }
 
-function chiliHome(){
-    chili.classList.add("chili-def");
-    chili.classList.remove("hide");
-    chili2.classList.remove("burnDoughnut");
-    girl.classList.remove("pickDoughnut");
-    girl.classList.remove("shakeGirlDougnut");
-}
+ function hideDougnut() {
+     doughnut.classList.add("hide");
+     setTimeout(chiliHome, 500);
+ }
 
-macaron.addEventListener("click", pickMacaron)
+ function chiliHome() {
+     chili.classList.add("chili-def");
+     chili.classList.remove("hide");
+     chili2.classList.remove("burnDoughnut");
+     girl.classList.remove("pickDoughnut");
+     girl.classList.remove("shakeGirlDougnut");
+ }
+
+ macaron.addEventListener("click", pickMacaron)
 
  function pickMacaron() {
      girl.classList.add("pickMacaron");
      setTimeout(pickMacaronSound, 2000);
  }
 
-function pickMacaronSound() {
-    girl.classList.add("shakeGirlMac");
+ function pickMacaronSound() {
+     girl.classList.add("shakeGirlMac");
      wrongAudio.play();
      setTimeout(pickMacaronDone, 1000);
  }
 
-function pickMacaronDone() {
-    chili.classList.remove("chili-def");
-    chili.classList.add("hide");
-    chili2.classList.add("burnMacaron");
-    blowAudio.play();
-    chili2.addEventListener('animationend', hideMacaron)
-}
+ function pickMacaronDone() {
+     chili.classList.remove("chili-def");
+     chili.classList.add("hide");
+     chili2.classList.add("burnMacaron");
+     blowAudio.play();
+     chili2.addEventListener('animationend', hideMacaron)
+ }
 
-function hideMacaron(){
-    macaron.classList.add("hide");
-    setTimeout(chiliHome2, 500);
-}
+ function hideMacaron() {
+     macaron.classList.add("hide");
+     setTimeout(chiliHome2, 500);
+ }
 
-function chiliHome2(){
-    chili.classList.add("chili-def");
-    chili.classList.remove("hide");
-    chili2.classList.remove("burnMacaron");
+ function chiliHome2() {
+     chili.classList.add("chili-def");
+     chili.classList.remove("hide");
+     chili2.classList.remove("burnMacaron");
      girl.classList.remove("pickMacaron");
-    girl.classList.remove("shakeGirlMac");
-}
+     girl.classList.remove("shakeGirlMac");
+ }
 
-milk.addEventListener("click", pickMilk)
+ milk.addEventListener("click", pickMilk)
 
  function pickMilk() {
      girl.classList.add("pickMilk");
      setTimeout(pickMilkDone, 2000);
  }
 
-function pickMilkDone() {
-    girl.classList.add("jumpMilk");
-    yesAudio.play();
-    yesAudio.addEventListener('ended', hideMilk)
-}
+ function pickMilkDone() {
+     girl.classList.add("jumpMilk");
+     yesAudio.play();
+     yesAudio.addEventListener('ended', hideMilk)
+ }
 
-function hideMilk(){
-    milk.classList.add("hide");
-    girl.classList.remove("jumpMilk");
-    girl.classList.remove("pickMilk");
-}
+ function hideMilk() {
+     milk.classList.add("hide");
+     girl.classList.remove("jumpMilk");
+     girl.classList.remove("pickMilk");
+ }
 
-sugar.addEventListener("click", pickSugar)
+ sugar.addEventListener("click", pickSugar)
 
  function pickSugar() {
      girl.classList.add("pickSugar");
      setTimeout(pickSugarDone, 2000);
  }
 
-function pickSugarDone() {
-    girl.classList.add("jumpSugar");
-    yesAudio.play();
-    yesAudio.addEventListener('ended', hideSugar)
-}
+ function pickSugarDone() {
+     girl.classList.add("jumpSugar");
+     yesAudio.play();
+     yesAudio.addEventListener('ended', hideSugar)
+ }
 
-function hideSugar(){
-    sugar.classList.add("hide");
-    girl.classList.remove("pickSugar");
-    girl.classList.remove("jumpSugar");
-}
+ function hideSugar() {
+     sugar.classList.add("hide");
+     girl.classList.remove("pickSugar");
+     girl.classList.remove("jumpSugar");
+ }
 
-egg.addEventListener("click", pickEgg)
+ egg.addEventListener("click", pickEgg)
 
  function pickEgg() {
      girl.classList.add("pickEgg");
      setTimeout(pickEggDone, 2000);
  }
 
-function pickEggDone() {
-    girl.classList.add("jumpEgg");
-    yesAudio.play();
-    yesAudio.addEventListener('ended', hideEgg)
-}
+ function pickEggDone() {
+     girl.classList.add("jumpEgg");
+     yesAudio.play();
+     yesAudio.addEventListener('ended', hideEgg)
+ }
 
-function hideEgg(){
-    egg.classList.add("hide");
-    girl.classList.remove("pickEgg");
-    girl.classList.remove("jumpEgg");
-}
+ function hideEgg() {
+     egg.classList.add("hide");
+     girl.classList.remove("pickEgg");
+     girl.classList.remove("jumpEgg");
+ }
 
-chocolate.addEventListener("click", pickChocolate)
+ chocolate.addEventListener("click", pickChocolate)
 
  function pickChocolate() {
      girl.classList.add("pickChocolate");
      setTimeout(pickChocolateDone, 2000);
  }
 
-function pickChocolateDone() {
-    girl.classList.add("jumpChocolate");
-    yesAudio.play();
-    yesAudio.addEventListener('ended', hideChocolate)
-}
+ function pickChocolateDone() {
+     girl.classList.add("jumpChocolate");
+     yesAudio.play();
+     yesAudio.addEventListener('ended', hideChocolate)
+ }
 
-function hideChocolate(){
-    chocolate.classList.add("hide");
-    girl.classList.remove("pickChocolate");
-    girl.classList.remove("jumpChocolate");
-}
+ function hideChocolate() {
+     chocolate.classList.add("hide");
+     girl.classList.remove("pickChocolate");
+     girl.classList.remove("jumpChocolate");
+ }
 
-flour.addEventListener("click", pickFlour)
+ flour.addEventListener("click", pickFlour)
 
  function pickFlour() {
      girl.classList.add("pickFlour");
      setTimeout(pickFlourDone, 2000);
  }
 
-function pickFlourDone() {
-    girl.classList.add("jumpFlour");
-    yesAudio.play();
-    yesAudio.addEventListener('ended', hideFlour)
-}
+ function pickFlourDone() {
+     girl.classList.add("jumpFlour");
+     yesAudio.play();
+     yesAudio.addEventListener('ended', hideFlour)
+ }
 
-function hideFlour(){
-    flour.classList.add("hide");
-    girl.classList.remove("pickFlour");
-    girl.classList.remove("jumpFlour");
-}
+ function hideFlour() {
+     flour.classList.add("hide");
+     girl.classList.remove("pickFlour");
+     girl.classList.remove("jumpFlour");
+ }
 
-butter.addEventListener("click", pickButter)
+ butter.addEventListener("click", pickButter)
 
  function pickButter() {
      girl.classList.add("pickButter");
      setTimeout(pickButterDone, 2000);
  }
 
-function pickButterDone() {
-    girl.classList.add("jumpButter");
-    yesAudio.play();
-    yesAudio.addEventListener('ended', hideButter)
-}
+ function pickButterDone() {
+     girl.classList.add("jumpButter");
+     yesAudio.play();
+     yesAudio.addEventListener('ended', hideButter)
+ }
 
-function hideButter(){
-    butter.classList.add("hide");
-    girl.classList.remove("pickButter");
-    girl.classList.remove("jumpButter");
-}
+ function hideButter() {
+     butter.classList.add("hide");
+     girl.classList.remove("pickButter");
+     girl.classList.remove("jumpButter");
+ }
 
-pageLoad();
+let bowl = document.querySelector(".bowl");
+    //if(butter.classList.contains("hide")){
+    bowl.addEventListener("click", pickbowl);
+function pickbowl(){
+    girl.classList.add("pickBowl");
+    setTimeout(pickBowlDone, 2000);
+   }
+
+//}
+  function pickBowlDone() {
+      burger.classList.remove("shakeCSS1");
+    burger.classList.add("burgerAttack");
+     yesAudio.play();
+     yesAudio.addEventListener('ended', chiliSaver)
+ }
+
+function chiliSaver() {
+     chili.classList.remove("chili-def");
+     chili.classList.add("hide");
+     chili2.classList.add("burnBurger");
+     blowAudio.play();
+     chili2.addEventListener('animationend', hideBurger)
+ }
+
+function hideBurger() {
+     burger.classList.add("hide");
+     setTimeout(chiliHome3, 500);
+ }
+
+ function chiliHome3() {
+     chili.classList.add("chili-def");
+     chili.classList.remove("hide");
+     chili2.classList.remove("burnBurger");
+     setTimeout(ingredientsFly, 500);
+ }
+
+ pageLoad();
