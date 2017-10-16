@@ -1,0 +1,51 @@
+*{
+    margin:0;
+    padding: 0;
+}
+audio {
+    display: none;
+}
+.kitchen {
+    width: 70vw;
+    margin: auto;
+}
+.kitchen img{
+    height: 100vh;
+}
+.missandmrchili {
+    width: 30%;
+    position: absolute;
+    top: 38%;
+    left: 28%;
+}
+.chili {
+    width: 49%;
+    transform: rotateY(180deg);
+    position: absolute;
+    right: 25%;
+    top: 43%;
+}
+.girl {
+    width: 80px;
+    height: 150px;
+    position: absolute;
+    top: 5%;
+    left: 2%;
+    background-image: url(../images/misschili.svg);
+    background-position: 0px 0px;
+    z-index: 90;
+}
+
+.pickDoughnut {
+    animation: walk 1.5s steps(9) forwards;
+    background-image: url(../images/MissChiliwalk_779x150.png);
+    background-position: 2px 0px;
+}
+
+@keyframes walk {
+    100% {
+        background-position: -779px 0px;
+        top: 3%;
+        left: 8%;
+    }
+}

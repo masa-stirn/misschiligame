@@ -22,7 +22,7 @@ let evilAudio = document.getElementById("evil-laugh");
  function pageLoad() {
      console.log("function: pageLoad")
      let bgsound = document.getElementById("bgsound");
-     bgsound.play();
+     //bgsound.play();
  }
  musicBtn.addEventListener("click", soundOnOff)
 
