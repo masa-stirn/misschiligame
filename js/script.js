@@ -17,11 +17,12 @@
  let yesAudio = document.getElementById("right");
  let blowAudio = document.getElementById("blow");
  let musicBtn = document.querySelector(".music-button");
+let evilAudio = document.getElementById("evil-laugh");
 
  function pageLoad() {
      console.log("function: pageLoad")
      let bgsound = document.getElementById("bgsound");
-     //bgsound.play();
+     bgsound.play();
  }
  musicBtn.addEventListener("click", soundOnOff)
 
@@ -215,16 +216,21 @@ let bowl = document.querySelector(".bowl");
     //if(butter.classList.contains("hide")){
     bowl.addEventListener("click", pickbowl);
 function pickbowl(){
+    let ing = document.querySelectorAll(".hide");
+    if(ing.length>5){
     girl.classList.add("pickBowl");
-    setTimeout(pickBowlDone, 2000);
+        setTimeout(pickBowlDone, 2000);
+    } else {
+        wrongAudio.play();
+    }
    }
 
 //}
   function pickBowlDone() {
       burger.classList.remove("shakeCSS1");
     burger.classList.add("burgerAttack");
-     yesAudio.play();
-     yesAudio.addEventListener('ended', chiliSaver)
+     evilAudio.play();
+     evilAudio.addEventListener('ended', chiliSaver)
  }
 
 function chiliSaver() {

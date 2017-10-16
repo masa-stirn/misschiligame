@@ -442,6 +442,19 @@ audio {
         transform: translateY(10px);
     }
 }
+.pickBowl2 {
+    animation: bowlwalk2 1.5s steps(9);
+    background-image: url(../images/MissChiliwalk_779x150.png);
+    background-position: 2px 0px;
+}
+
+@keyframes bowlwalk2 {
+    50% {
+        background-position: -779px 0px;
+        top: 82%;
+        left: 23%;
+    }
+}
 
 .pickBowl {
     animation: bowlwalk 1.5s steps(9) forwards;
