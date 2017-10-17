@@ -217,7 +217,7 @@ let bowl = document.querySelector(".bowl");
     bowl.addEventListener("click", pickbowl);
 function pickbowl(){
     let ing = document.querySelectorAll(".hide");
-    if(ing.length>5){
+    if(ing.length>1){
     girl.classList.add("pickBowl");
         setTimeout(pickBowlDone, 2000);
     } else {
@@ -227,7 +227,7 @@ function pickbowl(){
 
 //}
   function pickBowlDone() {
-      burger.classList.remove("shakeCSS1");
+    burger.classList.remove("shakeCSS1");
     burger.classList.add("burgerAttack");
      evilAudio.play();
      evilAudio.addEventListener('ended', chiliSaver)
@@ -250,7 +250,67 @@ function hideBurger() {
      chili.classList.add("chili-def");
      chili.classList.remove("hide");
      chili2.classList.remove("burnBurger");
-     setTimeout(ingredientsFly, 500);
+     setTimeout(ingredientsShow, 500);
  }
+
+function ingredientsShow(){
+    butter.classList.remove("hide"); egg.classList.remove("hide"); milk.classList.remove("hide"); chocolate.classList.remove("hide"); sugar.classList.remove("hide"); flour.classList.remove("hide");
+    setTimeout(butterFly, 500);
+    setTimeout(flourFly, 1000);
+    setTimeout(chocoFly, 1500);
+    setTimeout(eggFly, 2000);
+    setTimeout(sugarFly, 2500);
+    setTimeout(milkFly, 3000);
+}
+function butterFly(){
+    butter.classList.add("bowlFly");
+    setTimeout(butterHide, 600);
+}
+function butterHide(){
+    butter.classList.add("hide");
+}
+function flourFly(){
+    flour.classList.add("bowlFly");
+    setTimeout(flourHide, 600);
+}
+function flourHide(){
+    flour.classList.add("hide");
+}
+function chocoFly(){
+    chocolate.classList.add("bowlFly");
+    setTimeout(chocoHide, 600);
+}
+function chocoHide(){
+    chocolate.classList.add("hide");
+}
+function eggFly(){
+    egg.classList.add("bowlFly");
+    setTimeout(eggHide, 600);
+}
+function eggHide(){
+    egg.classList.add("hide");
+}
+function sugarFly(){
+    sugar.classList.add("bowlFly");
+    setTimeout(sugarHide, 600);
+}
+function sugarHide(){
+    sugar.classList.add("hide");
+}
+function milkFly(){
+    milk.classList.add("bowlFly");
+    setTimeout(milkHide, 600);
+}
+function milkHide(){
+    milk.classList.add("hide");
+}
+
+ milk.addEventListener("animationend", showCake)
+
+function showCake(){
+    let cake = document.querySelector(".cake")
+    cake.classList.remove("hide");
+    cake.classList.add("cakegrow");
+}
 
  pageLoad();

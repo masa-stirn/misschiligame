@@ -585,3 +585,36 @@ audio {
 .hide {
     display: none;
 }
+
+/* fly ingreds into the bowl*/
+.bowlFly {
+    animation: flyBowl 0.5s;
+}
+
+@keyframes flyBowl {
+    75% {
+        top: 75%;
+        left: 26%;
+    }
+    100%{
+        top:85%;
+        left: 26%
+    }
+}
+
+.cake{
+   width: 80%;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    filter: drop-shadow(25px 10px 13px rgba(255,255,255, 1));
+}
+.cakegrow{
+    animation: grow 5s reverse;
+}
+
+@keyframes grow {
+    to{
+        transform: scale(3);
+    }
+}

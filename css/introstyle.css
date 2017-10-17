@@ -2,6 +2,9 @@
     margin:0;
     padding: 0;
 }
+body {
+    height: 100vh;
+}
 audio {
     display: none;
 }
@@ -26,26 +29,33 @@ audio {
     top: 43%;
 }
 .girl {
-    width: 80px;
-    height: 150px;
+    width: 180px;
+    height: 360px;
     position: absolute;
-    top: 5%;
-    left: 2%;
-    background-image: url(../images/misschili.svg);
-    background-position: 0px 0px;
-    z-index: 90;
+    top: 43%;
+    left: 0;
+    animation: moveHer 2s forwards;
 }
 
-.pickDoughnut {
-    animation: walk 1.5s steps(9) forwards;
-    background-image: url(../images/MissChiliwalk_779x150.png);
+.moveGirl {
+    width: 180px;
+    height: 360px;
+    position: absolute;
+    top: 45%;
+    left: 0;
+    background-image: url(../images/MissChiliWalk2.png);
     background-position: 2px 0px;
+    z-index: 100;
+    animation: walk 1.5s steps(9);
 }
-
 @keyframes walk {
     100% {
-        background-position: -779px 0px;
-        top: 3%;
-        left: 8%;
+        background-position: -1800px 0px;
+    }
+}
+@keyframes moveHer {
+    100% {
+        top: 45%;
+        left: 50%;
     }
 }
