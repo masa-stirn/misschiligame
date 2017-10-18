@@ -80,3 +80,25 @@ audio {
     }
 }
 
+.hide {
+    display: none;
+}
+
+.hugAnimate {
+    width: 270px;
+    height: 360px;
+    position: absolute;
+    top: 43%;
+    left: 34%;
+    background-image: url(../images/hug2.png);
+    background-repeat: no-repeat;
+    background-position: 2px 0px;
+    z-index: 100;
+    animation: hug 7s steps(3, end) forwards;
+}
+
+@keyframes hug {
+    100% {
+        background-position: -825px 0px;
+    }
+}
