@@ -271,7 +271,7 @@ function butterHide(){
 }
 function flourFly(){
     flour.classList.add("bowlFly");
-    setTimeout(flourHide, 600);
+    setTimeout(flourHide, 400);
 }
 function flourHide(){
     flour.classList.add("hide");
@@ -308,9 +308,27 @@ function milkHide(){
  milk.addEventListener("animationend", showCake)
 
 function showCake(){
-    let cake = document.querySelector(".cake")
+    let cake = document.querySelector(".cake");
     cake.classList.remove("hide");
     cake.classList.add("cakegrow");
+    let sky = document.querySelector(".sky");
+    let bg = document.querySelector(".bg");
+    sky.classList.remove("sky");
+    bg.classList.remove("bg");
+    chili.classList.add("hide");
+    macaron.classList.add("hide");
+    bowl.classList.add("hide");
+    doughnut.classList.add("hide");
+    girl.classList.add("hide");
+    let body = document.querySelector("body");
+    body.style.backgroundColor = "white";
+    let yayAudio = document.getElementById("yay");
+    yayAudio.play();
+    setTimeout(kitchenScene, 600);
+}
+
+function kitchenScene(){
+
 }
 
  pageLoad();

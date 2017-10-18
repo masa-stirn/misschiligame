@@ -25,37 +25,58 @@ audio {
     width: 49%;
     transform: rotateY(180deg);
     position: absolute;
-    right: 25%;
+    left: 95%;
     top: 43%;
+   animation: moveHim 3s forwards;
 }
-.girl {
-    width: 180px;
-    height: 360px;
-    position: absolute;
-    top: 43%;
-    left: 0;
-    animation: moveHer 2s forwards;
+
+@keyframes moveHim {
+    0%{
+        opacity:0;
+    }
+    50%{
+        opacity:1;
+    }
+    100% {
+        transform: translateX(-140%) rotateY(180deg);
+    }
 }
 
 .moveGirl {
     width: 180px;
     height: 360px;
     position: absolute;
+    top: 20%;
+    left: 0px;
+    animation: moveHer 2s forwards;
+}
+
+@keyframes moveHer {
+    0%{
+        opacity:0;
+    }
+    50%{
+        opacity:1;
+    }
+    100% {
+        transform: translateX(230%);
+    }
+}
+
+.girl {
+    width: 180px;
+    height: 360px;
+    position: absolute;
     top: 45%;
-    left: 0;
+    left: 0px;
     background-image: url(../images/MissChiliWalk2.png);
     background-position: 2px 0px;
     z-index: 100;
-    animation: walk 1.5s steps(9);
+    animation: walk 1.5s steps(9) forwards;
 }
 @keyframes walk {
     100% {
         background-position: -1800px 0px;
     }
 }
-@keyframes moveHer {
-    100% {
-        top: 45%;
-        left: 50%;
-    }
-}
+

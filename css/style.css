@@ -607,14 +607,14 @@ audio {
     position: absolute;
     top: 10%;
     left: 10%;
-    filter: drop-shadow(25px 10px 13px rgba(255,255,255, 1));
+    filter: drop-shadow(25px 10px 13px rgba(244,194,194, 1));
 }
 .cakegrow{
-    animation: grow 5s reverse;
+    animation: grow 4s reverse;
 }
 
 @keyframes grow {
     to{
-        transform: scale(3);
+        transform: scale(2);
     }
 }
