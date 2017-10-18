@@ -20,7 +20,13 @@ let cake = document.querySelector(".cake");
  let musicBtn = document.querySelector(".music-button");
 let evilAudio = document.getElementById("evil-laugh");
 
+
+
  function pageLoad() {
+     let cursorPointer = document.querySelectorAll(".pointer");
+     cursorPointer.forEach(function(changeme, index){
+     changeme.style.cursor="pointer";
+     });
      console.log("function: pageLoad")
      let bgsound = document.getElementById("bgsound");
      //bgsound.play();
@@ -333,5 +339,6 @@ function kitchenScene(){
     cake.classList.add("cakeKitchen");
     }
 }
+
 
  pageLoad();

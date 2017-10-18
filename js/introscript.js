@@ -29,10 +29,20 @@
     cakeAudio.play();
         cakeAudio.addEventListener("ended", showRecipe)
     }
-
-
-
-
+    function showRecipe(){
+        let cakeRec = document.querySelector(".recipe");
+        cakeRec.classList.remove("hide");
+        setTimeout(helpUs, 400)
+    }
+    function helpUs(){
+        let helpAudio = document.getElementById("helpAudio");
+        helpAudio.play();
+         helpAudio.addEventListener("ended", showBtn)
+    }
+    function showBtn(){
+        let playBtn = document.querySelector(".plyBtn");
+        playBtn.classList.remove("hide");
+    }
 
 
 pageLoad();
