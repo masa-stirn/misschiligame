@@ -553,6 +553,22 @@ audio {
     cursor: pointer;
 }
 
+.story-button {
+    width: 10%;
+    position: absolute;
+    top: 14%;
+    left: 91%;
+    cursor: pointer;
+}
+
+.diagram-button {
+    width: 10%;
+    position: absolute;
+    top: 25%;
+    left: 91%;
+    cursor: pointer;
+}
+
 .shakeCSS2 {
     animation: shakeit 0.5s 1s infinite ease-in-out;
 }

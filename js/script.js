@@ -20,8 +20,6 @@ let cake = document.querySelector(".cake");
  let musicBtn = document.querySelector(".music-button");
 let evilAudio = document.getElementById("evil-laugh");
 
-
-
  function pageLoad() {
      let cursorPointer = document.querySelectorAll(".pointer");
      cursorPointer.forEach(function(changeme, index){
@@ -29,7 +27,7 @@ let evilAudio = document.getElementById("evil-laugh");
      });
      console.log("function: pageLoad")
      let bgsound = document.getElementById("bgsound");
-     //bgsound.play();
+     bgsound.play();
  }
  musicBtn.addEventListener("click", soundOnOff)
 
