@@ -618,3 +618,29 @@ audio {
         transform: scale(2);
     }
 }
+
+.kitchen {
+    width: 70vw;
+    margin: auto;
+}
+.kitchen img{
+    height: 100vh;
+}
+
+.cakeKitchen{
+    animation: shrink 4s forwards;
+}
+
+@keyframes shrink {
+    to{
+        transform: scale(0.3) translateY(-50%) translateX(100%);
+
+    }
+}
+
+.missandmrchili {
+    width: 30%;
+    position: absolute;
+    top: 38%;
+    left: 28%;
+}

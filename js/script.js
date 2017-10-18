@@ -10,6 +10,7 @@
  let burger = document.querySelector(".burger");
  let chili = document.querySelector(".chili");
  let chili2 = document.querySelector(".chili2");
+let cake = document.querySelector(".cake");
 
 
 //audio
@@ -213,11 +214,10 @@ let evilAudio = document.getElementById("evil-laugh");
  }
 
 let bowl = document.querySelector(".bowl");
-    //if(butter.classList.contains("hide")){
     bowl.addEventListener("click", pickbowl);
 function pickbowl(){
     let ing = document.querySelectorAll(".hide");
-    if(ing.length>1){
+    if(ing.length>5){
     girl.classList.add("pickBowl");
         setTimeout(pickBowlDone, 2000);
     } else {
@@ -225,7 +225,6 @@ function pickbowl(){
     }
    }
 
-//}
   function pickBowlDone() {
     burger.classList.remove("shakeCSS1");
     burger.classList.add("burgerAttack");
@@ -308,7 +307,6 @@ function milkHide(){
  milk.addEventListener("animationend", showCake)
 
 function showCake(){
-    let cake = document.querySelector(".cake");
     cake.classList.remove("hide");
     cake.classList.add("cakegrow");
     let sky = document.querySelector(".sky");
@@ -328,7 +326,12 @@ function showCake(){
 }
 
 function kitchenScene(){
-
+    let kitchen = document.querySelector(".kitchen");
+    kitchen.classList.remove("hide");
+    setTimeout(kitchenCakeScene, 600);
+    function kitchenCakeScene(){
+    cake.classList.add("cakeKitchen");
+    }
 }
 
  pageLoad();
